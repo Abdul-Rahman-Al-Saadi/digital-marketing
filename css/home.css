@@ -145,6 +145,7 @@ nav a {
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
+    transition: hover 0.3s ease, background-color 0.3s ease;
  }
 
  .get-started-btn {
@@ -154,6 +155,15 @@ nav a {
  .contact-us-btn {
     border: 2px solid #35BBDF;
  }
+
+.get-started-btn:hover {
+    transform: scale(1.2);
+    color: black;
+}
+
+.contact-us-btn:hover {
+    color: black;
+}
 
  .hero-right-half {
     position: relative;
@@ -280,7 +290,7 @@ nav a {
 }
 
 .our-mission {
-    background: linear-gradient(to right, #4D94E6, #35BBDF);
+    background: linear-gradient(to bottom right, #4D94E6, #21DADB);
     width: 100%;
     height: auto;
     text-align: center;
