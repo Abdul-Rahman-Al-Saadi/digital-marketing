@@ -262,7 +262,6 @@ nav a {
 .about-us .container {
   /* max-width: 1200px; */
   margin: 0 auto;
-  
 }
 
 .about-title {
@@ -282,8 +281,9 @@ nav a {
 
 .our-mission {
     background: linear-gradient(to right, #4D94E6, #35BBDF);
-    width: 100vw;
+    width: 100%;
     height: auto;
+    text-align: center;
     align-self: center;
     align-content: center;
 }
@@ -300,7 +300,7 @@ nav a {
   color: white;
   margin-bottom: 20px;
   line-height: 1.8;
-  padding: 0 20px;
+  padding: 0px 20px;
 }
 
 .values {
@@ -331,20 +331,17 @@ nav a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 320px; 
   }
-  
   .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     background-color: rgba(53,187,223, 0.25);
   }
-  
   .card-title {
     font-size: 22px;
     font-weight: bold;
     color: #333;
     margin-bottom: 15px;
   }
-  
   .card-description {
     font-size: 16px;
     color: #555;
@@ -354,15 +351,12 @@ nav a {
     .about-title {
       font-size: 30px;
     }
-  
     .about-intro, .about-mission {
       font-size: 16px;
     }
-  
     .card-title {
       font-size: 20px;
     }
-  
     .card-description {
       font-size: 14px;
     }
