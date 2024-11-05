@@ -46,11 +46,13 @@ nav a {
     color: white;
     border-radius: 5px;
     font-weight: 600;
+    cursor: pointer;
 }
 
  .logo {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
+    align-self: center;
  }
 
  .logo > img {
@@ -63,7 +65,7 @@ nav a {
     display: flex;
  }
 
- .hero-right-half {
+ .hero-left-half {
     width: 50%;
     height: 80vh;
     display: flex;
@@ -75,24 +77,25 @@ nav a {
     margin-left: 20px;
  }
 
- .hero-right-half > h1 {
+ .hero-left-half > h1 {
     font-size: 50px;
-    padding-left: 30px;
+    padding-left: 50px;
     font-weight: 600px;
  }
 
- .hero-right-half > p {
+ .hero-left-half > p {
     font-size: 1.25em;
     text-align: center;
     font-weight: bold;
  }
 
- .hero-right-half button {
+ .hero-left-half button {
     width: 200px;
     height: 40px;
-    margin-top: 30px;
+    margin: 30px 3px;
     border-radius: 5px;
     font-weight: 600;
+    cursor: pointer;
  }
 
  .get-started-btn {
@@ -102,3 +105,153 @@ nav a {
  .contact-us-btn {
     border: 2px solid #35BBDF;
  }
+
+ /* .hero-right-half {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 85vh;
+ }
+ .hero-right-half > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+ }
+
+ .hero-img-1{
+    position: absolute;
+    top: 10%; 
+    left: 27%;
+    width: 25%;
+    height:fit-content;
+    box-shadow: 10px 40px 30px rgb(128, 128, 128);
+ }
+ .hero-img-2{
+    position: absolute;
+    bottom: 12%; 
+    right: 23%; 
+    width: 25%;
+    box-shadow: 10px 40px 10px rgb(128, 128, 128);
+ }
+ .hero-img-3{
+    position: absolute;
+    top: 18%; 
+    right: 5%;
+    width: 40%;
+    box-shadow: 10px 0px 30px rgb(128, 128, 128);
+ }
+ .hero-img-4 {
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+    width: 40%;
+ }
+
+ .hero-right-half > div{
+    
+    transition: all 0.3s ease;
+ }
+
+ .hero-right-half > div:hover{
+    flex-grow: 1;
+    z-index: 10;
+ } */
+
+ .hero-right-half {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center all images inside */
+    align-items: center; /* Center images vertically */
+    width: 50%;
+    height: 85vh;
+    overflow: hidden; /* Prevent images from overflowing on hover scale */
+}
+
+/* Ensuring all images fill their respective divs */
+.hero-right-half > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Specific positioning for each image */
+.hero-img-1 {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 25%;
+    height: fit-content;
+    box-shadow: 20px 50px 30px rgba(0, 0, 0, 0.3);;
+    transition: transform 0.3s ease;
+}
+
+.hero-img-2 {
+    position: absolute;
+    top: 67%;
+    right: 25%;
+    width: 25%;
+    box-shadow: 10px 40px 10px rgba(0, 0, 0, 0.3);;
+    transition: transform 0.3s ease;
+}
+
+.hero-img-3 {
+    position: absolute;
+    top: 18%;
+    right: 15%;
+    width: 40%;
+    box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.3);;
+    transition: transform 0.3s ease;
+}
+
+.hero-img-4 {
+    position: absolute;
+    top: 43%;
+    left: 5%;
+    width: 40%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to slightly enlarge the images */
+.hero-right-half > div:hover {
+    transform: scale(1.25); /* Slight enlargement on hover */
+    z-index: 10; 
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); */
+}
+
+/* Make the images responsive to smaller screens */
+@media (max-width: 768px) {
+    .hero-img-1, .hero-img-2, .hero-img-3, .hero-img-4 {
+        width: 40%; /* Decrease width to make them more proportional on smaller screens */
+    }
+
+    .hero-img-1 {
+        top: 15%;
+        left: 20%;
+    }
+
+    .hero-img-2 {
+        bottom: 15%;
+        right: 20%;
+    }
+
+    .hero-img-3 {
+        top: 25%;
+        right: 5%;
+    }
+
+    .hero-img-4 {
+        bottom: 15%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-img-1, .hero-img-2, .hero-img-3, .hero-img-4 {
+        width: 80%; /* Stack images to be wider and fill screen on very small screens */
+        top: 10%;
+        bottom: 10%;
+        left: 10%;
+        right: 10%;
+    }
+}
+
