@@ -25,38 +25,17 @@ cards.forEach(card => {
     });
     gsap.from(".get-started-btn", {
         opacity: 0,
-        y: 20,          // Start from below
-        duration: 1,    // Duration of the animation
-        delay: 0.3,     // Delay the animation slightly
-        ease: "power3.out"  // Easing for smooth animation
+        y: 20,          
+        duration: 1,   
+        delay: 0.3,     
+        ease: "power3.out"  
     });
 
     gsap.from(".contact-us-btn", {
         opacity: 0,
-        y: 20,          // Start from below
+        y: 20,         
         duration: 1,
-        delay: 0.5,     // Delay a little more than the previous button
+        delay: 0.5,     
         ease: "power3.out"
     });
   });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     gsap.from(".card", {
-//       x: "100%",
-//       opacity: 0,
-//       duration: 1,
-//       stagger: 0.2,
-//       ease: "power3.out",
-//       scrollTrigger: {
-//         trigger: ".values",
-//         start: "top 80%",
-//         end: "bottom 20%",
-//         scrub: 0,
-//         once: true
-//       }
-//     });
-//   });
-
